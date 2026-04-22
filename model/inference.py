@@ -1,8 +1,4 @@
-"""
-model/inference.py
-Loads the trained Bayesian Network and performs probabilistic inference
-using pgmpy's VariableElimination.
-"""
+
 
 from __future__ import annotations
 import os
