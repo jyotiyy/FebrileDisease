@@ -16,7 +16,7 @@ DISEASE_LABELS = ["Malaria", "Rickettsial", "Typhoid", "Viral_Fever"]
 
 
 def load_model(path: str = MODEL_PATH):
-    """Load the pickled BayesianNetwork from disk."""
+    
     if not os.path.exists(path):
         raise FileNotFoundError(
             f"Trained model not found at {path}. "
@@ -63,12 +63,7 @@ def top_contributing_symptoms(
     top_disease: str,
     model=None,
 ) -> Dict[str, float]:
-    """
-    Estimate the marginal contribution of each active symptom to the
-    top disease prediction via simple leave-one-out sensitivity.
-
-    Returns a dict {symptom: weight} where weight in [0, 1].
-    """
+   
     if model is None:
         model = load_model()
 
