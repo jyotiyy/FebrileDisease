@@ -1,72 +1,84 @@
 <h1 align="center">Febrile Disease Predictor</h1>
 
 <p align="center">
-  Bayesian Network Based Disease Prediction System
+Bayesian Network Based Disease Prediction with Hill Climbing Treatment Optimization
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Bayesian-Network-green?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/Bayesian-Network-green?style=for-the-badge">
+<img src="https://img.shields.io/badge/Hill%20Climbing-Optimization-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
 </p>
 
 ---
 
 ## Overview
 
-This project predicts possible **febrile diseases** based on patient symptoms using a **Bayesian Network**. The model estimates disease probabilities from the given evidence and returns the most likely diagnosis.
+This project predicts **febrile diseases** from patient symptoms using a **Bayesian Network** and recommends the **most suitable treatment** using the **Hill Climbing Search Algorithm**.
 
 ---
 
 ## Features
 
-- Bayesian Network based inference
-- Symptom-based disease prediction
-- Probability estimation
+- Bayesian Network based disease prediction
+- Symptom probability estimation
+- Hill Climbing treatment optimization
 - Fast and lightweight implementation
-- Easy to extend with additional diseases
 
 ---
 
 ## Workflow
 
 ```mermaid
-flowchart LR
+flowchart TD
 
-A[Patient Symptoms]
---> B[Input Processing]
+A([Patient])
 
-B --> C[Bayesian Network]
+A --> B[Enter Symptoms]
 
-C --> D[Probability Calculation]
+B --> C[Data Preprocessing]
 
-D --> E[Most Likely Disease]
+C --> D[Bayesian Network]
 
-E --> F[Prediction Result]
+D --> E[Disease Probability Estimation]
+
+E --> F[Predicted Disease]
+
+F --> G[Available Treatments]
+
+G --> H[Hill Climbing Search]
+
+H --> I[Optimal Treatment]
+
+I --> J([Prediction Report])
 ```
 
 ---
 
-<details>
-<summary><b>Prediction Pipeline</b></summary>
+## Project Pipeline
 
 ```text
 Patient
    │
    ▼
-Enter Symptoms
+Symptoms
    │
    ▼
-Bayesian Inference
-   │
-   ▼
-Probability Computation
+Bayesian Network
    │
    ▼
 Disease Prediction
+   │
+   ▼
+Treatment Options
+   │
+   ▼
+Hill Climbing Search
+   │
+   ▼
+Optimal Treatment
 ```
-
-</details>
 
 ---
 
@@ -74,29 +86,18 @@ Disease Prediction
 
 - Python
 - Bayesian Network
-- Probability Theory
+- Hill Climbing Search
 
 ---
 
 ## Output
 
-The system:
-
-- Accepts symptoms as input
-- Computes posterior probabilities
-- Predicts the most probable febrile disease
-
----
-
-## Future Improvements
-
-- Larger medical dataset
-- Graphical User Interface
-- Improved Bayesian model
-- Confidence score visualization
+- Predicted disease
+- Disease probability
+- Optimized treatment recommendation
 
 ---
 
 <p align="center">
-Developed as an educational project demonstrating probabilistic disease prediction using Bayesian Networks.
+Developed as an educational project demonstrating probabilistic disease prediction and AI-based treatment optimization.
 </p>
